@@ -10,13 +10,16 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				background: 'var(--background)',
-				foreground: 'var(--foreground)',
-			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)',
+				'primary-purple': '#AD1FEA',
+				'primary-blue': '#4661E6',
+				'primary-dark-blue': '#373F68',
+				'primary-white': '#FFFFFF',
+				'secondary-grey': '#F2F4FF',
+				'secondary-light-grey': '#F7F8FD',
+				'secondary-dark-blue': '#3A4374',
+				'secondary-dark-grey': '#647196',
+				'tertiary-orange': '#F49F85',
+				'tertiary-sky': '#62BCFA',
 			},
 			fontSize: {
 				'heading-1': [
