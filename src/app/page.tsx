@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button'
+
 export default function Home() {
 	return (
 		<main className="max-w-7xl mx-auto pt-20">
@@ -39,6 +41,13 @@ export default function Home() {
 					lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc
 					sapien ornare nisl. Phasellus pede arcu
 				</p>
+			</div>
+			<p>buttons</p>
+			<div className="flex justify-between rounded h-11 px-6 tracking-normal">
+				<Button>Post Comment</Button>
+				<Button>Button 2</Button>
+				<Button>Button 3</Button>
+				<Button>Button 4</Button>
 			</div>
 		</main>
 	)
