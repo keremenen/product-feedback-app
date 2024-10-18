@@ -12,8 +12,8 @@ const buttonVariants = cva(
         secondary: "bg-[#4661E6] text-[#F2F4FE] hover:bg-[#7C91F9]",
         tertiary: "bg-[#3A4374] text-[#F2F4FE] hover:bg-[#656EA3]",
         warning: "bg-[#D73737] text-[#F2F4FE] hover:bg-[#E98888]",
-        dark: "bg-primary-white text-[#647196] hover:underline",
-        light: "bg-[#373F68] text-primary-white hover:underline",
+        light: "bg-primary-white text-[#647196] hover:underline",
+        dark: "bg-[#373F68] text-primary-white hover:underline",
         badge:
           "bg-[#F2F4FF] text-primary-blue font-semibold md:text-[13px] md:flex-col hover:bg-[#CFD7FF]",
         "badge-active":
