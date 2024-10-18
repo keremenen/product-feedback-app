@@ -2,6 +2,7 @@ import { FeedbackSingleItem } from "@/components/feedback-list";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 import { ChevronLeftIcon } from "lucide-react";
 
 const exampleFeedbackItem = {
@@ -96,6 +97,12 @@ export default function FeedbackPage() {
             )}
           </div>
         ))}
+      </section>
+
+      {/* ADD COMENT SECTION */}
+      <section className="rounded-md bg-primary-white pb-8 pl-[2.125rem] pr-8 pt-6">
+        <h2 className="text-heading-3 capitalize">add comment</h2>
+        <Textarea placeholder="Type your comment here" />
       </section>
     </main>
   );
