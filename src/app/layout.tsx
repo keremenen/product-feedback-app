@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
+import { Button } from "@/components/ui/button";
 
 const jost = localFont({
   src: "../fonts/Jost-VariableFont_wght.ttf",
@@ -20,9 +21,96 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jost.className} mx-auto flex max-w-[1100px] flex-row pt-24 text-body-1 text-secondary-dark-blue antialiased`}
+        className={`${jost.className} mx-auto flex max-w-[1100px] flex-row bg-secondary-light-grey pt-24 text-body-1 text-secondary-dark-blue antialiased`}
       >
-        <header className="max-w-[255px] md:text-black"></header>
+        <header className="flex w-[255px] flex-col gap-6">
+          <div className="bg-desktop-gradient flex h-[8.5625rem] w-full flex-col justify-end rounded-md bg-primary-white p-6">
+            <h1 className="text-heading-2 text-primary-white">
+              Frontend Mentor
+            </h1>
+            <p className="text-body-2 font-medium tracking-normal text-primary-white/75">
+              Feedback Board
+            </p>
+          </div>
+
+          <nav className="w-full rounded-md bg-primary-white p-6">
+            <ul className="flex flex-wrap gap-x-2 gap-y-[0.875rem]">
+              <li>
+                <Button variant={"badge-active"} size={"badge"}>
+                  All
+                </Button>
+              </li>
+              <li>
+                <Button variant={"badge"} size={"badge"}>
+                  UI
+                </Button>
+              </li>
+              <li>
+                <Button variant={"badge"} size={"badge"}>
+                  UX
+                </Button>
+              </li>
+              <li>
+                <Button variant={"badge"} size={"badge"}>
+                  Enhancement
+                </Button>
+              </li>
+              <li>
+                <Button variant={"badge"} size={"badge"}>
+                  Bug
+                </Button>
+              </li>
+              <li>
+                <Button variant={"badge"} size={"badge"}>
+                  Feature
+                </Button>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="rounded-md bg-primary-white p-6 pt-[1.1875rem]">
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="text-heading-3 text-secondary-dark-blue">
+                Roadmap
+              </h3>
+              <a
+                href="#"
+                className="text-body-3 text-primary-blue underline underline-offset-2"
+              >
+                View
+              </a>
+            </div>
+            <ul className="space-y-2">
+              <li className="flex items-start text-tertiary-orange">
+                <span className="max-w-2 text-lg leading-none">●</span>
+                <div className="ml-4 inline-block text-body-1 font-normal capitalize text-secondary-dark-grey">
+                  planned
+                </div>
+                <div className="ml-auto inline-block text-body-1 font-bold text-secondary-dark-grey">
+                  2
+                </div>
+              </li>
+              <li className="flex items-start text-primary-purple">
+                <span className="max-w-2 text-lg leading-none">●</span>
+                <div className="ml-4 text-body-1 font-normal capitalize text-secondary-dark-grey">
+                  in-progress
+                </div>
+                <div className="ml-auto text-body-1 font-bold text-secondary-dark-grey">
+                  3
+                </div>
+              </li>
+              <li className="flex items-start text-tertiary-sky">
+                <span className="max-w-2 text-lg leading-none">●</span>
+                <div className="ml-4 text-body-1 font-normal capitalize text-secondary-dark-grey">
+                  live
+                </div>
+                <div className="ml-auto text-body-1 font-bold text-secondary-dark-grey">
+                  1
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
         {children}
       </body>
     </html>
