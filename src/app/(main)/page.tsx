@@ -60,7 +60,7 @@ export default function Home() {
 				<br />
 			</div>
 			<div className="flex justify-center pb-20">
-				<Select open>
+				<Select>
 					<SelectTrigger>
 						<span className="font-normal">Sort by :</span>
 						<SelectValue placeholder="" className="text-red-600" />

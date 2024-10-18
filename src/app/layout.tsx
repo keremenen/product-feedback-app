@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import './globals.css'
+import '../styles/globals.css'
 
 const jost = localFont({
-	src: './fonts/Jost-VariableFont_wght.ttf',
+	src: '../fonts/Jost-VariableFont_wght.ttf',
 	display: 'swap',
 })
 
