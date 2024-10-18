@@ -1,6 +1,8 @@
 import { FeedbackSingleItem } from "@/components/feedback-list";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
-const ExampleFeedbackItem = {
+const exampleFeedbackItem = {
   id: 2,
   title: "Add a dark theme option",
   category: "feature",
@@ -55,14 +57,43 @@ const ExampleFeedbackItem = {
 };
 export default function FeedbackPage() {
   return (
-    <main className="mx-auto mt-24 flex max-w-[730px]">
+    <main className="mx-auto mt-24 flex max-w-[730px] flex-col gap-y-6">
       <FeedbackSingleItem
-        title={ExampleFeedbackItem.title}
-        category={ExampleFeedbackItem.category}
-        description={ExampleFeedbackItem.description}
-        comments={ExampleFeedbackItem.comments.length}
-        upvotes={ExampleFeedbackItem.upvotes}
+        title={exampleFeedbackItem.title}
+        category={exampleFeedbackItem.category}
+        description={exampleFeedbackItem.description}
+        comments={4}
+        upvotes={exampleFeedbackItem.upvotes}
       />
+
+      {/* COMMENT SECTION */}
+
+      <section className="w-full rounded-md bg-primary-white px-8 pb-12 pt-6">
+        <h2 className="px-[0.125rem] text-heading-3 capitalize">4 comments</h2>
+
+        {/* SINGLE COMMENT */}
+        <div className="mt-7">
+          {/* COMMENT HEADER */}
+          <div className="flex items-start gap-8">
+            <Avatar>
+              <AvatarImage src="/assets/user-images/image-elijah.jpg" />
+              <AvatarFallback>E</AvatarFallback>
+            </Avatar>
+            <div>
+              <h3 className="text-heading-4">Elijah Moss</h3>
+              <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
+                @hexagon.bestagon
+              </p>
+            </div>
+            <Button
+              variant={"light"}
+              className="-mt-[2px] ml-auto !h-auto w-[2.0625rem] items-center self-center !px-0 !py-0 text-right !text-body-3 font-semibold capitalize text-primary-blue"
+            >
+              reply
+            </Button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
