@@ -1,5 +1,12 @@
 import { Button } from '@/components/ui/button'
 import { ChevronLeftIcon, ChevronUpIcon } from 'lucide-react'
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from '@/components/ui/select'
 
 export default function Home() {
 	return (
@@ -44,12 +51,26 @@ export default function Home() {
 				</p>
 			</div>
 			<p>buttons</p>
-			<div className="flex justify-between rounded h-11 px-6 tracking-normal mb-8">
+			<div className="flex justify-between rounded h-11 px-6 tracking-normal mb-8 w-auto">
 				<Button>Post Comment</Button>
 				<Button variant={'secondary'}>Button 2</Button>
 				<Button variant={'tertiary'}>Button 3</Button>
 				<Button variant={'warning'}>Button 4</Button>
 				<br />
+			</div>
+			<div className="flex justify-center pb-20">
+				<Select>
+					<SelectTrigger>
+						<span className="font-normal">Sort by :</span>
+						<SelectValue placeholder="Most Upvoted" className="text-red-600" />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem value="light">Most Upvotes</SelectItem>
+						<SelectItem value="dark">Least Upvotes</SelectItem>
+						<SelectItem value="system">Most Comments</SelectItem>
+						<SelectItem value="system">Least Comments</SelectItem>
+					</SelectContent>
+				</Select>
 			</div>
 			<div className="flex justify-around rounded h-11 px-6 tracking-normal mb-8 lead">
 				<Button variant={'dark'} size={'medium'}>
@@ -62,14 +83,14 @@ export default function Home() {
 				</Button>
 			</div>
 			<div className="flex h- justify-around rounded h-11 px-6 tracking-normal mb-8">
-				<Button variant={'badge'} size={'badge'}>
+				<Button variant={'badge'} size={'badge'} active>
 					UX
 				</Button>
 				<Button variant={'badge'} size={'badge'}>
 					Enhancement
 				</Button>
 			</div>
-			<div className="flex justify-around rounded h-11 px-6 tracking-normal h-21">
+			<div className="flex justify-around rounded h-11 px-6 tracking-normal h-">
 				<Button variant={'badge'} size={'icon-badge'}>
 					<ChevronUpIcon />
 					99
