@@ -12,7 +12,7 @@ import Image from "next/image";
 import commentIcon from "../../icons/icon-comments.svg";
 import plusIcon from "../../icons/icon-plus.svg";
 import suggestionIcon from "../../icons/icon-suggestions.svg";
-import Logo from "@/components/Logo";
+import Logo from "@/components/logo";
 import Navigation from "@/components/navigation";
 
 export default function MainPage() {
