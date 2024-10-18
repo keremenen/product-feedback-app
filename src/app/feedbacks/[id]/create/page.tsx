@@ -56,6 +56,11 @@ export default function EditPage() {
             </p>
             <Textarea id="textarea" />
           </div>
+
+          <div>
+            <Button variant={"dark"}>Cancel</Button>
+            <Button>Add Feedback</Button>
+          </div>
         </div>
       </section>
     </main>
