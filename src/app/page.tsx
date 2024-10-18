@@ -4,6 +4,7 @@ import {
 	Select,
 	SelectContent,
 	SelectItem,
+	SelectSeparator,
 	SelectTrigger,
 	SelectValue,
 } from '@/components/ui/select'
@@ -59,16 +60,18 @@ export default function Home() {
 				<br />
 			</div>
 			<div className="flex justify-center pb-20">
-				<Select>
+				<Select open>
 					<SelectTrigger>
 						<span className="font-normal">Sort by :</span>
-						<SelectValue placeholder="Most Upvoted" className="text-red-600" />
+						<SelectValue placeholder="" className="text-red-600" />
 					</SelectTrigger>
 					<SelectContent>
 						<SelectItem value="light">Most Upvotes</SelectItem>
+						<SelectSeparator />
 						<SelectItem value="dark">Least Upvotes</SelectItem>
+						<SelectSeparator />
 						<SelectItem value="system">Most Comments</SelectItem>
-						<SelectItem value="system">Least Comments</SelectItem>
+						<SelectItem value="valuer">Least Comments</SelectItem>
 					</SelectContent>
 				</Select>
 			</div>
