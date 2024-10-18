@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronUpIcon } from "lucide-react";
 import commentIcon from "../icons/icon-comments.svg";
+import plusIcon from "../icons/icon-plus.svg";
+import emptyIllustration from "../icons/illustration-empty.svg";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -60,16 +62,20 @@ const FeedbackListFromAPI = [
 export default function FeedbackList() {
   return (
     <section className="flex flex-col gap-5">
-      {FeedbackListFromAPI.map((feedback) => (
-        <FeedbackSingleItem
-          key={feedback.id}
-          title={feedback.title}
-          category={feedback.category}
-          description={feedback.description}
-          comments={feedback.comments}
-          upvotes={feedback.upvotes}
-        />
-      ))}
+      {FeedbackListFromAPI ? (
+        FeedbackListFromAPI.map((feedback) => (
+          <FeedbackSingleItem
+            key={feedback.id}
+            title={feedback.title}
+            category={feedback.category}
+            description={feedback.description}
+            comments={feedback.comments}
+            upvotes={feedback.upvotes}
+          />
+        ))
+      ) : (
+        <FeedbackEmptyPlaceholder />
+      )}
     </section>
   );
 }
@@ -113,6 +119,29 @@ function FeedbackSingleItem({
         >
           {comments}
         </span>
+      </div>
+    </section>
+  );
+}
+
+function FeedbackEmptyPlaceholder() {
+  return (
+    <section className="flex min-h-[37.5rem] items-center justify-center rounded-md bg-primary-white">
+      <div className="flex max-w-[25.6rem] flex-col items-center justify-center">
+        <Image
+          src={emptyIllustration}
+          alt="Empty illustration"
+          className="mb-16 size-32"
+        />
+        <h3 className="mb-4 text-heading-1">There is no feedback yet.</h3>
+        <p className="text mb-12 text-center text-body-1 text-secondary-dark-grey">
+          Got a suggestion? Found a bug that needs to be squashed? We love
+          hearing about new ideas to improve our app.
+        </p>
+        <Button variant={"default"}>
+          <Image src={plusIcon} alt="plus icon" />
+          Add Feedback
+        </Button>
       </div>
     </section>
   );
