@@ -13,46 +13,15 @@ import commentIcon from "../../icons/icon-comments.svg";
 import plusIcon from "../../icons/icon-plus.svg";
 import suggestionIcon from "../../icons/icon-suggestions.svg";
 import Logo from "@/components/Logo";
+import Navigation from "@/components/navigation";
 
 export default function MainPage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[1110px] flex-row gap-x-[1.875rem]">
       <header className="flex w-[255px] flex-col gap-6">
         <Logo />
-        <nav className="w-full rounded-md bg-primary-white p-6">
-          <ul className="flex flex-wrap gap-x-2 gap-y-[0.875rem]">
-            <li>
-              <Button variant={"badge-active"} size={"badge"}>
-                All
-              </Button>
-            </li>
-            <li>
-              <Button variant={"badge"} size={"badge"}>
-                UI
-              </Button>
-            </li>
-            <li>
-              <Button variant={"badge"} size={"badge"}>
-                UX
-              </Button>
-            </li>
-            <li>
-              <Button variant={"badge"} size={"badge"}>
-                Enhancement
-              </Button>
-            </li>
-            <li>
-              <Button variant={"badge"} size={"badge"}>
-                Bug
-              </Button>
-            </li>
-            <li>
-              <Button variant={"badge"} size={"badge"}>
-                Feature
-              </Button>
-            </li>
-          </ul>
-        </nav>
+
+        <Navigation />
 
         <div className="rounded-md bg-primary-white p-6 pt-[1.1875rem]">
           <div className="mb-6 flex items-center justify-between">
