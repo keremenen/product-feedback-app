@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { ChevronLeftIcon } from 'lucide-react'
 
 export default function Home() {
 	return (
@@ -33,7 +34,7 @@ export default function Home() {
 					lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc
 					sapien ornare nisl. Phasellus pede arcu
 				</p>
-				<p className="text-body-3">
+				<p className="text-body-3 un">
 					Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
 					luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing,
 					commodo quis, gravida id, est. Sed lectus. Praesent elementum
@@ -43,11 +44,22 @@ export default function Home() {
 				</p>
 			</div>
 			<p>buttons</p>
-			<div className="flex justify-between rounded h-11 px-6 tracking-normal">
+			<div className="flex justify-between rounded h-11 px-6 tracking-normal mb-8">
 				<Button>Post Comment</Button>
-				<Button>Button 2</Button>
-				<Button>Button 3</Button>
-				<Button>Button 4</Button>
+				<Button variant={'secondary'}>Button 2</Button>
+				<Button variant={'tertiary'}>Button 3</Button>
+				<Button variant={'warning'}>Button 4</Button>
+				<br />
+			</div>
+			<div className="flex justify-around rounded h-11 px-6 tracking-normal">
+				<Button variant={'dark-navigation'} size={'medium'}>
+					<ChevronLeftIcon />
+					Go Back
+				</Button>
+				<Button variant={'white-navigation'} size={'medium'}>
+					<ChevronLeftIcon color="#4661E6" />
+					Go Back
+				</Button>
 			</div>
 		</main>
 	)

@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-	'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-body-3 md:text-heading-4 font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 tracking-normal',
+	'inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-[10px] text-body-3 md:text-heading-4 font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 tracking-normal',
 	{
 		variants: {
 			variant: {
@@ -13,9 +13,13 @@ const buttonVariants = cva(
 				secondary: 'bg-[#4661E6] text-[#F2F4FE] hover:bg-[#7C91F9]',
 				tertiary: 'bg-[#3A4374] text-[#F2F4FE] hover:bg-[#656EA3]',
 				warning: 'bg-[#D73737] text-[#F2F4FE] hover:bg-[#E98888]',
+				'white-navigation':
+					'bg-primary-white text-[#647196] hover:underline color:[#4661E6]',
+				'dark-navigation': 'bg-[#373F68] text-primary-white hover:underline',
 			},
 			size: {
 				default: 'h-10 md:h-11 px-4 md:px-6',
+				medium: 'h-[53px] px-[38px]',
 			},
 		},
 		defaultVariants: {
