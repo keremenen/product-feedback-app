@@ -14,6 +14,7 @@ import plusIcon from "../../icons/icon-plus.svg";
 import suggestionIcon from "../../icons/icon-suggestions.svg";
 import Logo from "@/components/logo";
 import Navigation from "@/components/navigation";
+import Roadmap from "@/components/roadmap";
 
 export default function MainPage() {
   return (
@@ -23,46 +24,7 @@ export default function MainPage() {
 
         <Navigation />
 
-        <div className="rounded-md bg-primary-white p-6 pt-[1.1875rem]">
-          <div className="mb-6 flex items-center justify-between">
-            <h3 className="text-heading-3 text-secondary-dark-blue">Roadmap</h3>
-            <a
-              href="#"
-              className="text-body-3 text-primary-blue underline underline-offset-2"
-            >
-              View
-            </a>
-          </div>
-          <ul className="space-y-2">
-            <li className="flex items-start text-tertiary-orange">
-              <span className="max-w-2 text-lg leading-none">●</span>
-              <div className="ml-4 inline-block text-body-1 font-normal capitalize text-secondary-dark-grey">
-                planned
-              </div>
-              <div className="ml-auto inline-block text-body-1 font-bold text-secondary-dark-grey">
-                2
-              </div>
-            </li>
-            <li className="flex items-start text-primary-purple">
-              <span className="max-w-2 text-lg leading-none">●</span>
-              <div className="ml-4 text-body-1 font-normal capitalize text-secondary-dark-grey">
-                in-progress
-              </div>
-              <div className="ml-auto text-body-1 font-bold text-secondary-dark-grey">
-                3
-              </div>
-            </li>
-            <li className="flex items-start text-tertiary-sky">
-              <span className="max-w-2 text-lg leading-none">●</span>
-              <div className="ml-4 text-body-1 font-normal capitalize text-secondary-dark-grey">
-                live
-              </div>
-              <div className="ml-auto text-body-1 font-bold text-secondary-dark-grey">
-                1
-              </div>
-            </li>
-          </ul>
-        </div>
+        <Roadmap />
       </header>
       <section className="flex flex-grow flex-col gap-6">
         <section>
