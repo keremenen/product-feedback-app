@@ -12,18 +12,13 @@ import Image from "next/image";
 import commentIcon from "../../icons/icon-comments.svg";
 import plusIcon from "../../icons/icon-plus.svg";
 import suggestionIcon from "../../icons/icon-suggestions.svg";
+import Logo from "@/components/Logo";
 
 export default function MainPage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[1110px] flex-row gap-x-[1.875rem]">
       <header className="flex w-[255px] flex-col gap-6">
-        <div className="bg-desktop-gradient flex h-[8.5625rem] w-full flex-col justify-end rounded-md bg-primary-white p-6">
-          <h1 className="text-heading-2 text-primary-white">Frontend Mentor</h1>
-          <p className="text-body-2 font-medium tracking-normal text-primary-white/75">
-            Feedback Board
-          </p>
-        </div>
-
+        <Logo />
         <nav className="w-full rounded-md bg-primary-white p-6">
           <ul className="flex flex-wrap gap-x-2 gap-y-[0.875rem]">
             <li>
