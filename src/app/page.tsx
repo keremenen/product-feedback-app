@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { ChevronLeftIcon } from 'lucide-react'
+import { ChevronLeftIcon, ChevronUpIcon } from 'lucide-react'
 
 export default function Home() {
 	return (
@@ -13,7 +13,7 @@ export default function Home() {
 				<p className="text-heading-3">
 					Pellentesque a diam sit amet mi ullamcorper vehicula
 				</p>
-				<p className="text-heading-4">
+				<p className="text-heading-4 font-med">
 					Ut scelerisque hendrerit tellus. Integer sagittis
 				</p>
 			</div>
@@ -51,14 +51,31 @@ export default function Home() {
 				<Button variant={'warning'}>Button 4</Button>
 				<br />
 			</div>
-			<div className="flex justify-around rounded h-11 px-6 tracking-normal">
-				<Button variant={'dark-navigation'} size={'medium'}>
+			<div className="flex justify-around rounded h-11 px-6 tracking-normal mb-8 lead">
+				<Button variant={'dark'} size={'medium'}>
 					<ChevronLeftIcon />
 					Go Back
 				</Button>
-				<Button variant={'white-navigation'} size={'medium'}>
+				<Button variant={'light'} size={'medium'}>
 					<ChevronLeftIcon color="#4661E6" />
 					Go Back
+				</Button>
+			</div>
+			<div className="flex h- justify-around rounded h-11 px-6 tracking-normal mb-8">
+				<Button variant={'badge'} size={'badge'}>
+					UX
+				</Button>
+				<Button variant={'badge'} size={'badge'}>
+					Enhancement
+				</Button>
+			</div>
+			<div className="flex justify-around rounded h-11 px-6 tracking-normal h-21">
+				<Button variant={'badge'} size={'icon-badge'}>
+					<ChevronUpIcon />
+					99
+				</Button>
+				<Button variant={'badge'} size={'badge'} active={true}>
+					UX
 				</Button>
 			</div>
 		</main>
