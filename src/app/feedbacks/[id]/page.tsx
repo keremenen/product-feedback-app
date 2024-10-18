@@ -2,6 +2,7 @@ import { FeedbackSingleItem } from "@/components/feedback-list";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ChevronLeftIcon } from "lucide-react";
 
 const exampleFeedbackItem = {
   id: 2,
@@ -61,6 +62,17 @@ export default function FeedbackPage() {
 
   return (
     <main className="mx-auto mt-24 flex max-w-[730px] flex-col gap-y-6">
+      {/* HEADER */}
+
+      <section className="flex items-center justify-between">
+        <Button variant={"light"} className="bg-transparent !px-0">
+          <ChevronLeftIcon className="p-0" />
+          Go Back
+        </Button>
+        <Button variant={"secondary"}>Edit Feedback</Button>
+      </section>
+
+      {/* FEEDBACK */}
       <FeedbackSingleItem
         title={exampleFeedbackItem.title}
         category={exampleFeedbackItem.category}
@@ -70,7 +82,6 @@ export default function FeedbackPage() {
       />
 
       {/* COMMENT SECTION */}
-
       <section className="w-full rounded-md bg-primary-white px-8 pb-12 pt-6">
         <h2 className="mb-7 px-[0.125rem] text-heading-3 capitalize">
           4 comments
