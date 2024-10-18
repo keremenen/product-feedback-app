@@ -63,17 +63,7 @@ export default function FeedbackPage() {
 
   return (
     <main className="mx-auto mt-24 flex max-w-[730px] flex-col gap-y-6">
-      {/* HEADER */}
-
-      <section className="flex items-center justify-between">
-        <Button variant={"light"} className="bg-transparent !px-0">
-          <ChevronLeftIcon className="p-0" />
-          Go Back
-        </Button>
-        <Button variant={"secondary"}>Edit Feedback</Button>
-      </section>
-
-      {/* FEEDBACK */}
+      <FeedbackHeader />
       <FeedbackSingleItem
         title={exampleFeedbackItem.title}
         category={exampleFeedbackItem.category}
@@ -82,13 +72,7 @@ export default function FeedbackPage() {
         upvotes={exampleFeedbackItem.upvotes}
       />
 
-      {/* COMMENT SECTION */}
-      <section className="w-full rounded-md bg-primary-white px-8 pb-12 pt-6">
-        <h2 className="mb-7 px-[0.125rem] text-heading-3 capitalize">
-          4 comments
-        </h2>
-
-        {/* SINGLE COMMENT */}
+      <FeedbackCommentWrapper>
         {exampleFeedbackItem.comments.map((comment, index) => (
           <div key={comment.id}>
             <SingleComment comment={comment} />
@@ -97,19 +81,9 @@ export default function FeedbackPage() {
             )}
           </div>
         ))}
-      </section>
+      </FeedbackCommentWrapper>
 
-      {/* ADD COMENT SECTION */}
-      <section className="rounded-md bg-primary-white pb-8 pl-[2.125rem] pr-8 pt-6">
-        <h2 className="mb-6 text-heading-3 capitalize">add comment</h2>
-        <Textarea placeholder="Type your comment here" className="mb-4" />
-        <div className="flex items-center justify-between">
-          <p className="text-body-2 text-secondary-dark-grey">
-            250 Characters left
-          </p>
-          <Button>Post Comment</Button>
-        </div>
-      </section>
+      <FeedbackAddComment />
     </main>
   );
 }
@@ -196,5 +170,42 @@ function SingleComment({ comment }: SingleCommentProps) {
           ))}
       </div>
     </div>
+  );
+}
+
+function FeedbackHeader() {
+  return (
+    <section className="flex items-center justify-between">
+      <Button variant={"light"} className="bg-transparent !px-0">
+        <ChevronLeftIcon className="p-0" />
+        Go Back
+      </Button>
+      <Button variant={"secondary"}>Edit Feedback</Button>
+    </section>
+  );
+}
+function FeedbackCommentWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <section className="w-full rounded-md bg-primary-white px-8 pb-12 pt-6">
+      <h2 className="mb-7 px-[0.125rem] text-heading-3 capitalize">
+        4 comments
+      </h2>
+      {children}
+    </section>
+  );
+}
+
+function FeedbackAddComment() {
+  return (
+    <section className="rounded-md bg-primary-white pb-8 pl-[2.125rem] pr-8 pt-6">
+      <h2 className="mb-6 text-heading-3 capitalize">add comment</h2>
+      <Textarea placeholder="Type your comment here" className="mb-4" />
+      <div className="flex items-center justify-between">
+        <p className="text-body-2 text-secondary-dark-grey">
+          250 Characters left
+        </p>
+        <Button>Post Comment</Button>
+      </div>
+    </section>
   );
 }
