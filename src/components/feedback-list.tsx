@@ -88,7 +88,7 @@ type FeedbackSingleItemProps = {
   upvotes: number;
 };
 
-function FeedbackSingleItem({
+export function FeedbackSingleItem({
   title,
   category,
   description,
@@ -96,7 +96,7 @@ function FeedbackSingleItem({
   upvotes,
 }: FeedbackSingleItemProps) {
   return (
-    <section className="flex flex-row gap-10 rounded-md bg-primary-white px-8 py-7">
+    <section className="flex w-full flex-row gap-10 rounded-md bg-primary-white px-8 py-7">
       <Button variant={"badge"} size={"icon-badge"}>
         <ChevronUpIcon />
         <span className="font-bold text-secondary-dark-blue">{upvotes}</span>
