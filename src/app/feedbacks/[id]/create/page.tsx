@@ -16,7 +16,11 @@ export default function EditPage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <section className="mb-[4.0625rem] flex items-center justify-between">
-        <Button variant={"light"} className="!h-5 bg-transparent !px-0">
+        <Button
+          variant={"light"}
+          size={"navigation"}
+          className="bg-transparent"
+        >
           <ChevronLeftIcon className="p-0" />
           Go Back
         </Button>

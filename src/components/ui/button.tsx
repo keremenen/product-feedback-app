@@ -22,6 +22,7 @@ const buttonVariants = cva(
       size: {
         default: "h-10 md:h-[44px] px-4 md:px-6",
         medium: "h-[53px] px-[38px]",
+        navigation: "h-5 px-1",
         badge: "h-[30px] px-4",
         "icon-badge": "h-[32px] w-[69px] md:h-[53px] md:w-[40px] md:gap-[2px]",
       },
