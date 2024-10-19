@@ -15,6 +15,7 @@ import BackNavigation from "@/components/back-navigation";
 import FormWrapper from "@/components/form-wrapper";
 import FormLogo from "@/components/form-logo";
 import FormTitle from "@/components/form-title";
+import FormControls from "@/components/form-controls";
 
 export default function CreatePage() {
   return (
@@ -24,7 +25,7 @@ export default function CreatePage() {
         <FormLogo>
           <Plus className="size-7 text-white" />
         </FormLogo>
-        {/* HEADING */}
+
         <FormTitle>Create New Feedback</FormTitle>
 
         {/* FORM */}
@@ -75,10 +76,10 @@ export default function CreatePage() {
             </div>
             <Textarea id="textarea" className="min-h-24" />
           </div>
-          <div className="flex justify-end gap-x-4">
+          <FormControls>
             <Button variant={"dark"}>Cancel</Button>
             <Button>Add Feedback</Button>
-          </div>
+          </FormControls>
         </div>
       </FormWrapper>
     </main>
