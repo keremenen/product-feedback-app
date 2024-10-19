@@ -13,15 +13,16 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import BackNavigation from "@/components/back-navigation";
 import FormWrapper from "@/components/form-wrapper";
+import FormLogo from "@/components/form-logo";
 
 export default function CreatePage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <BackNavigation />
       <FormWrapper>
-        <div className="bg-purple-gradient absolute -top-7 flex size-14 items-center justify-center rounded-full">
+        <FormLogo>
           <Plus className="size-7 text-white" />
-        </div>
+        </FormLogo>
         {/* HEADING */}
         <h1 className="mb-10 text-heading-1">Create New Feedback</h1>
 
