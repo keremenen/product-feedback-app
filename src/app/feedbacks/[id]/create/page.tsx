@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-export default function EditPage() {
+export default function CreatePage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <section className="mb-[4.0625rem] flex items-center justify-between">
