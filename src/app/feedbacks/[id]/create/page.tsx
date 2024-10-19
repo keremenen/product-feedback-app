@@ -21,20 +21,39 @@ export default function EditPage() {
           Go Back
         </Button>
       </section>
-      <section className="w-full bg-primary-white">
+      <section className="w-full bg-primary-white px-[2.625rem] pb-10 pt-[3.25rem]">
+        {/* HEADING */}
+        <h1 className="mb-10 text-heading-1">Create New Feedback</h1>
+
         {/* FORM */}
         <div>
-          <div>
-            <Label htmlFor="title">Feedback Title</Label>
-            <p>Add a dark theme optione</p>
-            <Input placeholder="Feedback Title" className="w-full" id="title" />
+          <div className="mb-6 flex flex-col gap-4">
+            <div>
+              <Label htmlFor="title" className="text-heading-4 font-bold">
+                Feedback Title
+              </Label>
+              <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
+                Add a short, descriptive headline
+              </p>
+            </div>
+            <Input
+              placeholder="Feedback Title"
+              className="w-full placeholder:text-secondary-dark-blue"
+              id="title"
+            />
           </div>
 
-          <div>
-            <Label htmlFor="category">Category</Label>
-            <p>Add a short, descriptive headline</p>
+          <div className="mb-5 flex flex-col gap-4">
+            <div>
+              <Label htmlFor="title" className="text-heading-4 font-bold">
+                Category
+              </Label>
+              <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
+                Choose a category for your feedback
+              </p>
+            </div>
             <Select>
-              <SelectTrigger className="rounded-[0.3125rem] text-body-3 font-normal">
+              <SelectTrigger className="h-12 rounded-[0.3125rem] border-none bg-secondary-light-grey pl-6 text-body-3 font-normal">
                 <SelectValue placeholder="Planned" />
               </SelectTrigger>
               <SelectContent>
@@ -48,16 +67,19 @@ export default function EditPage() {
             </Select>
           </div>
 
-          <div>
-            <Label htmlFor="textarea">Detail</Label>
-            <p>
-              Include any specific comments on what should be improved, added,
-              etc.
-            </p>
-            <Textarea id="textarea" />
+          <div className="mb-8 flex flex-col gap-4">
+            <div>
+              <Label htmlFor="title" className="text-heading-4 font-bold">
+                Feedback Detail
+              </Label>
+              <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
+                Include any specific comments on what should be improved, added,
+                etc.
+              </p>
+            </div>
+            <Textarea id="textarea" className="min-h-24 border-none pl-6" />
           </div>
-
-          <div>
+          <div className="flex justify-end gap-x-4">
             <Button variant={"dark"}>Cancel</Button>
             <Button>Add Feedback</Button>
           </div>
