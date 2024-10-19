@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ChevronLeftIcon, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -11,20 +11,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import BackNavigation from "@/components/back-navigation";
 
 export default function CreatePage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
-      <section className="mb-[4.0625rem] flex items-center justify-between">
-        <Button
-          variant={"light"}
-          size={"navigation"}
-          className="bg-transparent"
-        >
-          <ChevronLeftIcon className="p-0" />
-          Go Back
-        </Button>
-      </section>
+      <BackNavigation />
       <section className="relative w-full rounded-md bg-primary-white px-[2.625rem] pb-10 pt-[3.25rem]">
         <div className="bg-purple-gradient absolute -top-7 flex size-14 items-center justify-center rounded-full">
           <Plus className="size-7 text-white" />
