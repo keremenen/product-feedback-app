@@ -22,7 +22,6 @@ export default function CreatePage() {
         <div className="bg-purple-gradient absolute -top-7 flex size-14 items-center justify-center rounded-full">
           <Plus className="size-7 text-white" />
         </div>
-
         {/* HEADING */}
         <h1 className="mb-10 text-heading-1">Create New Feedback</h1>
 
