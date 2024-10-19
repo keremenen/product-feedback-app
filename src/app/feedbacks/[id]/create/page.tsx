@@ -14,6 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import BackNavigation from "@/components/back-navigation";
 import FormWrapper from "@/components/form-wrapper";
 import FormLogo from "@/components/form-logo";
+import FormTitle from "@/components/form-title";
 
 export default function CreatePage() {
   return (
@@ -24,7 +25,7 @@ export default function CreatePage() {
           <Plus className="size-7 text-white" />
         </FormLogo>
         {/* HEADING */}
-        <h1 className="mb-10 text-heading-1">Create New Feedback</h1>
+        <FormTitle>Create New Feedback</FormTitle>
 
         {/* FORM */}
         <div>
