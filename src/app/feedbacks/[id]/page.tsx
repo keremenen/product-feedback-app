@@ -59,8 +59,6 @@ const exampleFeedbackItem = {
   ],
 };
 export default function FeedbackPage() {
-  console.log(exampleFeedbackItem);
-
   return (
     <main className="mx-auto mt-24 flex max-w-[730px] flex-col gap-y-6">
       <FeedbackHeader />
@@ -184,6 +182,7 @@ function FeedbackHeader() {
     </section>
   );
 }
+
 function FeedbackCommentWrapper({ children }: { children: React.ReactNode }) {
   return (
     <section className="w-full rounded-md bg-primary-white px-8 pb-12 pt-6">
