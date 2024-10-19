@@ -76,6 +76,8 @@ const config: Config = {
       },
       backgroundImage: {
         "desktop-gradient": 'url("/images/background-header.png")',
+        "purple-gradient":
+          "linear-gradient(45deg, #E84D70 0%, #A337F6 53%, #28A7ED 100%)",
       },
       borderRadius: {
         md: "0.625rem",
