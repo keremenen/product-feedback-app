@@ -57,7 +57,7 @@ export default function EditPage() {
               </p>
             </div>
             <Select>
-              <SelectTrigger className="h-12 rounded-[0.3125rem] border-none bg-secondary-light-grey pl-6 text-body-3 font-normal">
+              <SelectTrigger className="h-12 text-body-3">
                 <SelectValue placeholder="Planned" />
               </SelectTrigger>
               <SelectContent>

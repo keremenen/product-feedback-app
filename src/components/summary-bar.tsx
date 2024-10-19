@@ -25,7 +25,7 @@ export default function SummaryBar() {
         {/* SELECT FORM */}
         <div className="relative text-primary-white">
           <Select>
-            <SelectTrigger className="border-none bg-transparent focus:ring-transparent">
+            <SelectTrigger className="bg-transparent pl-3 font-bold focus:ring-transparent">
               <span className="font-normal">Sort by :</span>
               <SelectValue placeholder="Most Upvotes" />
             </SelectTrigger>
