@@ -33,9 +33,7 @@ export default function EditPage() {
         <div>
           <div className="mb-6 flex flex-col gap-4">
             <div>
-              <Label htmlFor="title" className="text-heading-4 font-bold">
-                Feedback Title
-              </Label>
+              <Label htmlFor="title">Feedback Title</Label>
               <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
                 Add a short, descriptive headline
               </p>
@@ -49,9 +47,7 @@ export default function EditPage() {
 
           <div className="mb-5 flex flex-col gap-4">
             <div>
-              <Label htmlFor="title" className="text-heading-4 font-bold">
-                Category
-              </Label>
+              <Label htmlFor="title">Category</Label>
               <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
                 Choose a category for your feedback
               </p>
@@ -73,15 +69,13 @@ export default function EditPage() {
 
           <div className="mb-8 flex flex-col gap-4">
             <div>
-              <Label htmlFor="title" className="text-heading-4 font-bold">
-                Feedback Detail
-              </Label>
+              <Label htmlFor="title">Feedback Detail</Label>
               <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
                 Include any specific comments on what should be improved, added,
                 etc.
               </p>
             </div>
-            <Textarea id="textarea" className="min-h-24 border-none pl-6" />
+            <Textarea id="textarea" className="min-h-24" />
           </div>
           <div className="flex justify-end gap-x-4">
             <Button variant={"dark"}>Cancel</Button>

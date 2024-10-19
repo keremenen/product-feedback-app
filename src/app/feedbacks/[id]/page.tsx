@@ -199,7 +199,7 @@ function FeedbackAddComment() {
   return (
     <section className="rounded-md bg-primary-white pb-8 pl-[2.125rem] pr-8 pt-6">
       <h2 className="mb-6 text-heading-3 capitalize">add comment</h2>
-      <Textarea placeholder="Type your comment here" className="mb-4" />
+      <Textarea placeholder="Type your comment here" className="" />
       <div className="flex items-center justify-between">
         <p className="text-body-2 text-secondary-dark-grey">
           250 Characters left
