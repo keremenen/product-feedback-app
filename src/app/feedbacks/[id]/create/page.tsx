@@ -16,6 +16,7 @@ import FormWrapper from "@/components/form-wrapper";
 import FormLogo from "@/components/form-logo";
 import FormTitle from "@/components/form-title";
 import FormControls from "@/components/form-controls";
+import FormBody from "@/components/form-body";
 
 export default function CreatePage() {
   return (
@@ -29,7 +30,7 @@ export default function CreatePage() {
         <FormTitle>Create New Feedback</FormTitle>
 
         {/* FORM */}
-        <div>
+        <FormBody>
           <div className="mb-6 flex flex-col gap-4">
             <div>
               <Label htmlFor="title">Feedback Title</Label>
@@ -66,7 +67,7 @@ export default function CreatePage() {
             </Select>
           </div>
 
-          <div className="mb-8 flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <div>
               <Label htmlFor="title">Feedback Detail</Label>
               <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
@@ -76,11 +77,11 @@ export default function CreatePage() {
             </div>
             <Textarea id="textarea" className="min-h-24" />
           </div>
-          <FormControls>
-            <Button variant={"dark"}>Cancel</Button>
-            <Button>Add Feedback</Button>
-          </FormControls>
-        </div>
+        </FormBody>
+        <FormControls>
+          <Button variant={"dark"}>Cancel</Button>
+          <Button>Add Feedback</Button>
+        </FormControls>
       </FormWrapper>
     </main>
   );
