@@ -12,12 +12,13 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import BackNavigation from "@/components/back-navigation";
+import FormWrapper from "@/components/form-wrapper";
 
 export default function CreatePage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <BackNavigation />
-      <section className="relative w-full rounded-md bg-primary-white px-[2.625rem] pb-10 pt-[3.25rem]">
+      <FormWrapper>
         <div className="bg-purple-gradient absolute -top-7 flex size-14 items-center justify-center rounded-full">
           <Plus className="size-7 text-white" />
         </div>
@@ -78,7 +79,7 @@ export default function CreatePage() {
             <Button>Add Feedback</Button>
           </div>
         </div>
-      </section>
+      </FormWrapper>
     </main>
   );
 }
