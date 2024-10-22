@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Plus } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -17,15 +16,14 @@ import FormLogo from "@/components/form-logo";
 import FormTitle from "@/components/form-title";
 import FormControls from "@/components/form-controls";
 import FormBody from "@/components/form-body";
+import editIcon from "@/icons/icon-edit-feedback.svg";
 
 export default function EditPage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <BackNavigation />
       <FormWrapper>
-        <FormLogo>
-          <Plus className="size-7 text-white" />
-        </FormLogo>
+        <FormLogo icon={editIcon} />
 
         <FormTitle>Editing ‘Add a dark theme option’</FormTitle>
 
@@ -105,9 +103,7 @@ export default function EditPage() {
           </div>
         </FormBody>
         <FormControls>
-          <Button variant={"warning"} className="mr-auto">
-            Delete
-          </Button>
+          <Button variant={"warning"}>Delete</Button>
           <Button variant={"dark"}>Cancel</Button>
           <Button>Add Feedback</Button>
         </FormControls>

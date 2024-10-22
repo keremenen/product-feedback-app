@@ -1,7 +1,13 @@
-export default function FormLogo({ children }: { children: React.ReactNode }) {
+import Image from "next/image";
+
+export default function FormLogo({ icon }: { icon: string }) {
   return (
-    <div className="bg-purple-gradient absolute -top-7 flex size-14 items-center justify-center rounded-full">
-      {children}
-    </div>
+    <Image
+      src={icon}
+      alt="icon"
+      width={56}
+      height={56}
+      className="absolute -top-7"
+    />
   );
 }
