@@ -18,8 +18,10 @@ const config: Config = {
         "secondary-light-grey": "#F7F8FD",
         "secondary-dark-blue": "#3A4374",
         "secondary-dark-grey": "#647196",
+        "secondary-white": "#F2F4FE",
         "tertiary-orange": "#F49F85",
         "tertiary-sky": "#62BCFA",
+        "tertiary-white": "#CFD7FF",
       },
       fontSize: {
         "heading-1": [

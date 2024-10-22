@@ -2,28 +2,36 @@ import { cn } from "@/lib/utils";
 import ArrowUpIcon from "@/icons/icon-arrow-up.svg";
 
 type InteractiveButtonProps = {
-  children: React.ReactNode;
-  isVertial: boolean;
-  isActive: boolean;
+  children: string;
+  isVertical?: boolean;
+  isActive?: boolean;
 };
 
 export default function InteractiveButton({
   children,
-  isVertial = false,
-  isActive = false,
+  isVertical,
+  isActive,
 }: InteractiveButtonProps) {
   return (
     <button
       className={cn(
-        "flex-col bg-[#F2F4FE] hover:bg-[#CFD7FF] focus:bg-[#CFD7FF]",
+        "bg-secondary-white hover:bg-tertiary-white focus:bg-tertiary-white text-text-secondary-dark-blue group flex h-[3.313rem] w-[2.5rem] flex-col items-center justify-center gap-y-[0.313rem] rounded-[0.625rem] pt-[0.25rem] text-[0.813rem] font-bold tracking-[-0.011rem] outline-none transition-colors duration-100 ease-in-out",
         {
-          "flex-row": isVertial,
-          "bg-[#4661E6]": isActive,
+          "h-[2.5rem] w-[4.313rem] flex-row gap-x-[0.5rem] pt-0": isVertical,
+          "bg-primary-blue text-primary-white hover:text-secondary-dark-blue":
+            isActive,
         },
       )}
     >
-      <ArrowUpIcon className="h-4 w-4" />
-      {children}
+      <ArrowUpIcon
+        class={cn(
+          "text-primary-blue transition-colors duration-100 ease-in-out",
+          {
+            "text-primary-white group-hover:text-primary-blue": isActive,
+          },
+        )}
+      />
+      <span>{children}</span>
     </button>
   );
 }

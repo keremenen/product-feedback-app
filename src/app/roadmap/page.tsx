@@ -54,7 +54,9 @@ export default function RoadmapPage() {
               Feature
             </Button>
             <div>
-              <InteractiveButton />
+              <InteractiveButton isVertical>123</InteractiveButton>
+              <br />
+              <InteractiveButton>99</InteractiveButton>
             </div>
           </section>
         </section>
