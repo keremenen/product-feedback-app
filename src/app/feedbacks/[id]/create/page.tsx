@@ -57,12 +57,15 @@ export default function CreatePage() {
                 <SelectValue placeholder="Planned" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="suggestion">Suggestion</SelectItem>
+                <SelectItem value="feature">Feature</SelectItem>
                 <SelectSeparator />
-                <SelectItem value="planned">Planned</SelectItem>
+                <SelectItem value="ui">UI</SelectItem>
                 <SelectSeparator />
-                <SelectItem value="in-progress">In-Progress</SelectItem>
-                <SelectItem value="live">Live</SelectItem>
+                <SelectItem value="ux">UX</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="enhancement">Enhancement</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="bug">Bug</SelectItem>
               </SelectContent>
             </Select>
           </div>
