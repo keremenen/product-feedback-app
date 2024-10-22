@@ -1,3 +1,4 @@
+import InteractiveButton from "@/components/interactive-button";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Plus } from "lucide-react";
 import React from "react";
@@ -38,7 +39,9 @@ export default function RoadmapPage() {
             </p>
           </div>
 
-          <section className="relative w-full rounded-[5px] bg-primary-white p-8">
+          <section className="relative w-full overflow-hidden rounded-[5px] bg-primary-white p-8">
+            <div className="absolute left-0 top-0 h-[0.375rem] w-full overflow-hidden bg-tertiary-orange" />
+
             <div className="mb-2 flex items-center gap-x-4">
               <div className="size-2 rounded-full bg-tertiary-orange" />
               <p className="text-secondary-dark-grey">Planned</p>
@@ -47,13 +50,11 @@ export default function RoadmapPage() {
             <p className="mb-4 text-secondary-dark-grey">
               It would be great to see a more detailed breakdown of solutions.
             </p>
-            <Button variant={"badge"} size={"badge"}>
+            <Button variant={"badge"} size={"badge"} className="mb-4">
               Feature
             </Button>
             <div>
-              <Button variant={"badge"} size={"icon-badge"}>
-                123
-              </Button>
+              <InteractiveButton />
             </div>
           </section>
         </section>
