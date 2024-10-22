@@ -54,7 +54,32 @@ export default function EditPage() {
             </div>
             <Select>
               <SelectTrigger className="h-12 text-body-3">
-                <SelectValue placeholder="Planned" />
+                <SelectValue placeholder="" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="feature">Feature</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="ui">UI</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="ux">UX</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="enhancement">Enhancement</SelectItem>
+                <SelectSeparator />
+                <SelectItem value="bug">Bug</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="mb-5 flex flex-col gap-4">
+            <div>
+              <Label htmlFor="title">Update Status</Label>
+              <p className="text-heading-4 font-normal tracking-normal text-secondary-dark-grey">
+                Change feedback state
+              </p>
+            </div>
+            <Select>
+              <SelectTrigger className="h-12 text-body-3">
+                <SelectValue placeholder="" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="suggestion">Suggestion</SelectItem>
@@ -62,6 +87,7 @@ export default function EditPage() {
                 <SelectItem value="planned">Planned</SelectItem>
                 <SelectSeparator />
                 <SelectItem value="in-progress">In-Progress</SelectItem>
+                <SelectSeparator />
                 <SelectItem value="live">Live</SelectItem>
               </SelectContent>
             </Select>
@@ -79,6 +105,9 @@ export default function EditPage() {
           </div>
         </FormBody>
         <FormControls>
+          <Button variant={"warning"} className="mr-auto">
+            Delete
+          </Button>
           <Button variant={"dark"}>Cancel</Button>
           <Button>Add Feedback</Button>
         </FormControls>
