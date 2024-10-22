@@ -31,12 +31,31 @@ export default function RoadmapPage() {
       {/* ROADMAP SECTION */}
       <section className="flex flex-row justify-between gap-x-[1.875rem]">
         <section className="max-w-[21.875rem] basis-1/3">
-          <div className="flex flex-col gap-y-1">
+          <div className="mb-8 flex flex-col gap-y-1">
             <h2 className="text-heading-3">Planned (2)</h2>
             <p className="text-secondary-dark-grey">
               Ideas prioritized for research
             </p>
           </div>
+
+          <section className="relative w-full rounded-[5px] bg-primary-white p-8">
+            <div className="mb-2 flex items-center gap-x-4">
+              <div className="size-2 rounded-full bg-tertiary-orange" />
+              <p className="text-secondary-dark-grey">Planned</p>
+            </div>
+            <h3 className="mb-1 text-heading-3">More comprehensive reports</h3>
+            <p className="mb-4 text-secondary-dark-grey">
+              It would be great to see a more detailed breakdown of solutions.
+            </p>
+            <Button variant={"badge"} size={"badge"}>
+              Feature
+            </Button>
+            <div>
+              <Button variant={"badge"} size={"icon-badge"}>
+                123
+              </Button>
+            </div>
+          </section>
         </section>
 
         <section className="max-w-[21.875rem] basis-1/3">
