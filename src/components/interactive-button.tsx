@@ -22,7 +22,7 @@ export default function InteractiveButton({
         },
       )}
     >
-      <ArrowUpIcon />
+      <ArrowUpIcon className="h-4 w-4" />
       {children}
     </button>
   );
