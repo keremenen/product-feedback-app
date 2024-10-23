@@ -1,6 +1,6 @@
+import Badge from "@/components/badge";
 import InteractiveButton from "@/components/interactive-button";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Plus } from "lucide-react";
 import React from "react";
 
 export default function RoadmapPage() {
@@ -11,11 +11,9 @@ export default function RoadmapPage() {
         {/* NAVIGATION WITH TITLE */}
         <div className="flex flex-col items-start gap-y-1">
           <Button
-            variant={"light"}
-            size={"navigation"}
+            variant={"navigation"}
             className="bg-transparent px-0 text-primary-white"
           >
-            <ChevronLeft />
             Go Back
           </Button>
           <h1 className="text-heading-1 text-white">Roadmap</h1>
@@ -24,8 +22,7 @@ export default function RoadmapPage() {
         <div className="ml-auto px-2">
           {/* BUTTON */}
           <Button className="text-heading-4 tracking-normal text-primary-white">
-            <Plus />
-            Add Feedback
+            + Add Feedback
           </Button>
         </div>
       </section>
@@ -50,14 +47,8 @@ export default function RoadmapPage() {
             <p className="mb-4 text-secondary-dark-grey">
               It would be great to see a more detailed breakdown of solutions.
             </p>
-            <Button variant={"badge"} size={"badge"} className="mb-4">
-              Feature
-            </Button>
-            <div>
-              <InteractiveButton isVertical>123</InteractiveButton>
-              <br />
-              <InteractiveButton>99</InteractiveButton>
-            </div>
+            <Badge>Feature</Badge>
+            <div></div>
           </section>
         </section>
 
