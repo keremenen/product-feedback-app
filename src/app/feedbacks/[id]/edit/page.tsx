@@ -12,18 +12,19 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import BackNavigation from "@/components/back-navigation";
 import FormWrapper from "@/components/form-wrapper";
-// import FormLogo from "@/components/form-logo";
 import FormTitle from "@/components/form-title";
 import FormControls from "@/components/form-controls";
 import FormBody from "@/components/form-body";
-// import editIcon from "@/icons/icon-edit-feedback.svg";
+import EditIcon from "@/icons/icon-edit-feedback.svg";
 
 export default function EditPage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <BackNavigation />
       <FormWrapper>
-        {/* <FormLogo icon={editIcon} /> */}
+        <div className="absolute -top-7 size-14">
+          <EditIcon />
+        </div>
 
         <FormTitle>Editing ‘Add a dark theme option’</FormTitle>
 
@@ -103,8 +104,10 @@ export default function EditPage() {
           </div>
         </FormBody>
         <FormControls>
-          <Button variant={"warning"}>Delete</Button>
-          <Button variant={"dark"}>Cancel</Button>
+          <Button variant={"warning"} className="mr-auto w-[93px]">
+            Delete
+          </Button>
+          <Button className="w-[93px] bg-secondary-dark-blue">Cancel</Button>
           <Button>Add Feedback</Button>
         </FormControls>
       </FormWrapper>
