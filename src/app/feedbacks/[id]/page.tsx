@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
-import { ChevronLeftIcon } from "lucide-react";
+import LeftIcon from "@/icons/icon-arrow-left.svg";
 
 const exampleFeedbackItem = {
   id: 2,
@@ -60,7 +60,7 @@ const exampleFeedbackItem = {
 };
 export default function FeedbackPage() {
   return (
-    <main className="mx-auto mt-24 flex max-w-[730px] flex-col gap-y-6">
+    <main className="mx-auto mt-20 flex max-w-[730px] flex-col gap-y-6">
       <FeedbackHeader />
       <FeedbackSingleItem
         title={exampleFeedbackItem.title}
@@ -174,8 +174,8 @@ function SingleComment({ comment }: SingleCommentProps) {
 function FeedbackHeader() {
   return (
     <section className="flex items-center justify-between">
-      <Button variant={"light"} className="bg-transparent !px-0">
-        <ChevronLeftIcon className="p-0" />
+      <Button variant={"light"} size={"navigation"}>
+        <LeftIcon />
         Go Back
       </Button>
       <Button variant={"secondary"}>Edit Feedback</Button>
