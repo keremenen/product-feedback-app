@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import ArrowUpIcon from "@/icons/icon-arrow-up.svg";
 
 type InteractiveButtonProps = {
-  children: string;
+  children: React.ReactNode;
   isVertical?: boolean;
   isActive?: boolean;
 };
