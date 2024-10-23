@@ -1,7 +1,7 @@
 import FeedbackList from "@/components/feedback-list";
 import Logo from "@/components/logo";
 import Navigation from "@/components/navigation";
-import Roadmap from "@/components/roadmap";
+import RoadmapList from "@/components/roadmap-list";
 import SummaryBar from "@/components/summary-bar";
 
 export default function MainPage() {
@@ -10,7 +10,7 @@ export default function MainPage() {
       <header className="flex w-[15.9375rem] flex-col gap-6">
         <Logo />
         <Navigation />
-        <Roadmap />
+        <RoadmapList />
       </header>
       <section className="flex flex-grow flex-col gap-6">
         <SummaryBar />

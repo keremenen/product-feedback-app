@@ -19,7 +19,7 @@ const RoadMapEntries = [
   },
 ];
 
-export default function Roadmap() {
+export default function RoadmapList() {
   return (
     <div className="rounded-md bg-primary-white p-6 pt-[1.1875rem]">
       <div className="mb-6 flex items-center justify-between">
