@@ -12,18 +12,21 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import BackNavigation from "@/components/back-navigation";
 import FormWrapper from "@/components/form-wrapper";
-import FormLogo from "@/components/form-logo";
+
 import FormTitle from "@/components/form-title";
 import FormControls from "@/components/form-controls";
 import FormBody from "@/components/form-body";
-import newFeedbackIcon from "@/icons/icon-new-feedback.svg";
+import NewFeedbackIcon from "@/icons/icon-new-feedback.svg";
 
 export default function CreatePage() {
   return (
     <main className="mx-auto mt-24 flex max-w-[540px] flex-col">
       <BackNavigation />
       <FormWrapper>
-        <FormLogo icon={newFeedbackIcon} />
+        {/* <FormLogo icon={newFeedbackIcon} /> */}
+        <div className="absolute -top-7 size-14">
+          <NewFeedbackIcon />
+        </div>
 
         <FormTitle>Create New Feedback</FormTitle>
 
@@ -80,7 +83,7 @@ export default function CreatePage() {
           </div>
         </FormBody>
         <FormControls>
-          <Button variant={"dark"}>Cancel</Button>
+          <Button className="w-[93px] bg-secondary-dark-blue">Cancel</Button>
           <Button>Add Feedback</Button>
         </FormControls>
       </FormWrapper>
