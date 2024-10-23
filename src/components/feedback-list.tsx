@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronUpIcon } from "lucide-react";
-import commentIcon from "../icons/icon-comments.svg";
+// import commentIcon from "../icons/icon-comments.svg";
 import plusIcon from "../icons/icon-plus.svg";
 import emptyIllustration from "../icons/illustration-empty.svg";
 import Image from "next/image";
@@ -111,7 +111,7 @@ export function FeedbackSingleItem({
         </Button>
       </div>
       <div className="ml-auto flex w-11 items-center gap-3">
-        <Image src={commentIcon} alt="comment icon" />
+        {/* <Image src={commentIcon} alt="comment icon" /> */}
         <span
           className={cn("text-body-1 font-bold", {
             "opacity-50": comments === 0,
