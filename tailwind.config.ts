@@ -21,7 +21,7 @@ const config: Config = {
         "secondary-white": "#F2F4FE",
         "tertiary-orange": "#F49F85",
         "tertiary-sky": "#62BCFA",
-        "tertiary-white": "#CFD7FF",
+        "tertiary-blue": "#CFD7FF",
       },
       fontSize: {
         "heading-1": [
