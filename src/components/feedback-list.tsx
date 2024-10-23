@@ -62,7 +62,7 @@ const FeedbackListFromAPI = [
 export default function FeedbackList() {
   return (
     <section className="flex flex-col gap-5">
-      {FeedbackListFromAPI && FeedbackListFromAPI.length > 0 ? (
+      {FeedbackListFromAPI && FeedbackListFromAPI.length >= 0 ? (
         FeedbackListFromAPI.map((feedback) => (
           <FeedbackSingleItem
             key={feedback.id}
