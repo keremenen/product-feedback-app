@@ -6,7 +6,7 @@ import SummaryBar from "@/components/summary-bar";
 
 export default function MainPage() {
   return (
-    <main className="mx-auto mt-24 flex max-w-[1110px] flex-row gap-x-[1.875rem]">
+    <main className="mx-auto mt-[94px] flex max-w-[1110px] flex-row gap-x-[1.875rem]">
       <header className="flex w-[255px] flex-col gap-6">
         <Logo />
         <Navigation />
