@@ -109,9 +109,7 @@ export function FeedbackSingleItem({
         <p className="mb-3 text-body-1 text-secondary-dark-grey">
           {description}
         </p>
-        {/* <Button variant={"badge"} size={"badge"}> */}
-        {/* {category} */}
-        {/* </Button> */}
+        <Badge>{category}</Badge>
       </div>
       <div className="ml-auto flex w-11 items-center gap-3">
         {/* <Image src={commentIcon} alt="comment icon" /> */}
