@@ -14,17 +14,11 @@ const buttonVariants = cva(
         warning: "bg-[#D73737] text-[#F2F4FE] hover:bg-[#E98888]",
         light: "bg-primary-white text-[#647196] hover:underline",
         dark: "bg-[#373F68] text-primary-white hover:underline",
-        badge:
-          "bg-[#F2F4FF] text-primary-blue font-semibold md:text-[13px] md:flex-col hover:bg-[#CFD7FF]",
-        "badge-active":
-          "bg-[#4661E6] text-primary-white font-semibold md:text-[13px] ",
       },
       size: {
         default: "h-10 md:h-[44px] px-4 md:px-6",
         medium: "h-[53px] px-[38px]",
         navigation: "h-5 px-1",
-        badge: "h-[30px] px-4",
-        "icon-badge": "h-[32px] w-[69px] md:h-[53px] md:w-[40px] md:gap-[2px]",
       },
     },
     defaultVariants: {
@@ -42,13 +36,13 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, active, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(
           buttonVariants({
-            variant: active && variant === "badge" ? "badge-active" : variant,
+            variant,
             size,
             className,
           }),
