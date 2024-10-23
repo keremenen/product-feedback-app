@@ -1,6 +1,4 @@
-// import Image from "next/image";
-// import plusIcon from "../icons/icon-plus.svg";
-// import suggestionIcon from "../icons/icon-suggestions.svg";
+import SuggestionsIcon from "../icons/icon-suggestions.svg";
 import {
   Select,
   SelectContent,
@@ -17,7 +15,7 @@ export default function SummaryBar() {
       <div className="flex flex-row items-center gap-[27px] rounded-md bg-primary-dark-blue px-4 py-[0.875rem] pl-6">
         {/* SUGGESTIONS */}
         <div className="flex items-center gap-4">
-          {/* <Image src={suggestionIcon} alt="suggestion icon" /> */}
+          <SuggestionsIcon />
 
           <h2 className="text-heading-3 text-primary-white">6 Suggestions</h2>
         </div>
@@ -43,10 +41,7 @@ export default function SummaryBar() {
 
         {/* BUTTON */}
         <div className="ml-auto">
-          <Button variant={"default"}>
-            {/* <Image src={plusIcon} alt="plus icon" /> */}
-            Add Feedback
-          </Button>
+          <Button>+ Add Feedback</Button>
         </div>
       </div>
     </section>
