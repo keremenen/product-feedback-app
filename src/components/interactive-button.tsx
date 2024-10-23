@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-// import ArrowUpIcon from "@/icons/icon-arrow-up.svg";
+import ArrowUpIcon from "@/icons/icon-arrow-up.svg";
 
 type InteractiveButtonProps = {
   children: string;
@@ -23,14 +23,14 @@ export default function InteractiveButton({
         },
       )}
     >
-      {/* <ArrowUpIcon
+      <ArrowUpIcon
         class={cn(
           "text-primary-blue transition-colors duration-100 ease-in-out",
           {
             "text-primary-white group-hover:text-primary-blue": isActive,
           },
         )}
-      /> */}
+      />
       <span>{children}</span>
     </button>
   );

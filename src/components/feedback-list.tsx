@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ChevronUpIcon } from "lucide-react";
-// import commentIcon from "../icons/icon-comments.svg";
+import commentIcon from "../icons/icon-comments.svg";
 import plusIcon from "../icons/icon-plus.svg";
 import emptyIllustration from "../icons/illustration-empty.svg";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Badge from "./badge";
+import InteractiveButton from "./interactive-button";
 
 const FeedbackListFromAPI = [
   {
@@ -97,18 +99,19 @@ export function FeedbackSingleItem({
 }: FeedbackSingleItemProps) {
   return (
     <section className="flex w-full flex-row gap-10 rounded-md bg-primary-white px-8 py-7">
-      <Button variant={"badge"} size={"icon-badge"}>
-        <ChevronUpIcon />
-        <span className="font-bold text-secondary-dark-blue">{upvotes}</span>
-      </Button>
+      {/* <Button variant={"badge"} size={"icon-badge"}> */}
+      {/* <ChevronUpIcon /> */}
+      {/* <span className="font-bold text-secondary-dark-blue">{upvotes}</span> */}
+      {/* </Button> */}
+      <InteractiveButton>{upvotes}</InteractiveButton>
       <div>
         <h3 className="mb-1 text-heading-3">{title}</h3>
         <p className="mb-3 text-body-1 text-secondary-dark-grey">
           {description}
         </p>
-        <Button variant={"badge"} size={"badge"}>
-          {category}
-        </Button>
+        {/* <Button variant={"badge"} size={"badge"}> */}
+        {/* {category} */}
+        {/* </Button> */}
       </div>
       <div className="ml-auto flex w-11 items-center gap-3">
         {/* <Image src={commentIcon} alt="comment icon" /> */}
